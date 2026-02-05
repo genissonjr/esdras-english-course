@@ -1,147 +1,202 @@
-🧠 📍 CHECKPOINT ATUALIZADO — REAL
-🗓 Data
+🧠 CHECKPOINT “ESDRAS-ENGLISH-CONTINUACAO”
 
-03/02/2026
+🗓 Data: 05/02/2026
 
-✅ STACK CONFIRMADA
+✅ Estado atual do projeto
 
-✔ Vite
-✔ React + TypeScript
-✔ Tailwind (via build, não CDN)
-✔ Git + GitHub Desktop
-✔ Dev server funcionando
-✔ Projeto abre no localhost
+Stack confirmada:
 
-✅ ARQUITETURA (VOCÊ DISSE QUE JÁ TEM)
+Vite + React + TypeScript
 
-Provavelmente algo assim já existe:
+Tailwind CSS via build (não CDN)
+
+Git + GitHub (branch atual: features/esdras-continuacao)
+
+Dev server funcionando (npm run dev)
+
+Arquitetura de pastas:
 
 src/
-components/
-Header.tsx
+├─ components/
+│  ├─ layout/
+│  │  └─ Header.tsx
+│  ├─ sections/
+│  │  ├─ Hero.tsx          <-- Hero com fundo azul e texto branco
+│  │  └─ CourseFeatures.tsx <-- Cards com shadow visível e hover
+│  └─ ui/
+│     └─ LoginModal.tsx
+├─ App.tsx                 <-- importa Header, Hero, CourseFeatures, LoginModal
+├─ main.tsx
+└─ index.css
+
+
+Status Tailwind:
+
+Funcional, classes aplicando corretamente
+
+Gradiente removido do Hero, agora fundo azul sólido
+
+🔹 Estado dos Components principais
 Hero.tsx
-Course.tsx
-Author.tsx
-Pricing.tsx
-Testimonials.tsx
-Footer.tsx
+
+Fundo azul sólido #2563eb
+
+Texto branco legível (text-white / text-white/90)
+
+Badge “100% Online Course” em branco
+
+Botões com hover e responsividade mantidos
+
+CourseFeatures.tsx
+
+Cards com shadow-lg + hover:shadow-2xl
+
+Transition suave: transition-shadow duration-300
+
+Layout em grid responsivo 1-2-3 colunas
 
 App.tsx
-main.tsx
-index.css
 
-✅ TAILWIND STATUS
+Importa: <Header />, <Hero />, <CourseFeatures />, <LoginModal />
 
-✔ Instalado
-✔ Funcionando
-✔ Vite plugin instalado (@tailwindcss/vite)
-✔ Estilo aplicando no navegador
+Controle de modal funcionando com useState
 
-🎯 ONDE VOCÊ REALMENTE ESTÁ
+🔹 Próximos passos prováveis
 
-👉 Estrutura profissional criada
-👉 Ambiente configurado
-👉 Projeto roda
+Continuar migrando o HTML restante para React Components, mantendo estilo Tailwind.
 
-🔴 O que falta (provável)
+Revisar cores, sombras, hover states para consistência visual.
 
-Agora é só uma dessas fases:
+Trabalhar Hero & CourseFeatures para ficar idêntico ao design HTML inicial.
 
-1️⃣ Migrar HTML real → dentro dos components
-OU
-2️⃣ Ajustar layout que ficou branco
-OU
-3️⃣ Conectar components no App.tsx
-OU
-4️⃣ Ajustar Tailwind config / index.css
+Continuar implementando seções restantes:
 
-🧱 SITUAÇÃO MAIS PROVÁVEL AGORA
+Author / Instructor
 
-Pelo que aconteceu antes:
+Pricing / Enrollment
 
-👉 Tela branca
-👉 Depois apareceu “login / site carregando”
-👉 Depois ficou branco
-👉 Depois começou a funcionar
+Testimonials
 
-Isso normalmente significa:
+Footer
 
-✔ React está renderizando
-✔ Mas components ainda podem estar vazios ou incompletos
+⚡ Dicas para continuidade
 
-🧭 PRÓXIMA MISSÃO REAL (MAIS PROVÁVEL)
+Sempre testar cada componente no navegador antes de avançar
 
-👉 Garantir que App.tsx está chamando TODOS components
+Use classes Tailwind inline primeiro, depois refatore se necessário
 
-Exemplo:
+Para sombras, hover e cores, use hex direto se a herança de Tailwind não estiver funcionando
 
-<Header />
-<Hero />
-<Course />
-<Author />
-<Pricing />
-<Testimonials />
-<Footer />
+💾 Como continuar daqui
 
-🔥 ESTADO DO PROJETO (NÍVEL PROFISSIONAL)
-Infra
+Quando voltar, basta falar:
 
-🟢 OK
+👉 Continuar checkpoint Esdras React
 
-Build
 
-🟢 OK
+E assumiremos que:
 
-Tailwind
+Branch features/esdras-continuacao está ativa
 
-🟢 OK
+Hero, CourseFeatures, App.tsx já estão configurados
 
-Arquitetura React
+Tailwind e Vite funcionam corretamente
 
-🟢 Criada
+Próxima missão: continuar seções do site ou ajustes visuais
 
-Migração conteúdo
+Se quiser, posso criar uma versão visual do checkpoint com todas cores, sombras e layouts anotados para referência rápida, tipo “mapa do site React” — super útil para continuar sem confusão.
 
-🟡 Provavelmente em andamento
+Quer que eu faça isso?
 
-🧠 CHECKPOINT SIMPLES PRA VOLTAR DEPOIS
+quero
 
-Quando voltar, pode falar:
+Perfeito! 😄 Vamos criar um mapa visual do projeto React, mostrando todos os componentes, cores, sombras e layout, para servir como referência rápida. Isso vai deixar muito mais fácil continuar daqui sem se perder.
 
-👉 Continuar checkpoint Esdras React estrutura pronta
+🗺 Mapa Visual do Projeto – Esdras English Course (React + Tailwind)
+App.tsx
+├── Header.tsx
+│   ├─ Logo: "E" azul (#2563eb) + Nome Esdras
+│   ├─ Nav Links: Home, Course, Author, Enroll
+│   └─ Login Button (abre LoginModal)
+│
+├── Hero.tsx
+│   ├─ Fundo: Azul sólido #2563eb
+│   ├─ Badge: 100% Online Course (text-white)
+│   ├─ Título: "Master English..." (text-white)
+│   ├─ Subtítulo: descrição (text-white/90)
+│   └─ Botões:
+│       ├─ Enroll Now (bg-accent, hover:bg-yellow-600)
+│       └─ Course Preview (bg-white/20, hover:bg-white/30)
+│
+├── CourseFeatures.tsx
+│   ├─ Fundo da seção: bg-gray-50
+│   ├─ Cards:
+│       ├─ bg-white, border-gray-200, rounded-xl
+│       ├─ Shadow: shadow-lg
+│       ├─ Hover: shadow-2xl
+│       ├─ Transition: transition-shadow duration-300
+│       └─ Ícone: bg-primary/10 + ícone FontAwesome
+│
+├── LoginModal.tsx
+│   ├─ Fundo escuro semi-transparente
+│   ├─ Modal branco centralizado
+│   ├─ Campos: Email, Password, Remember me
+│   └─ Botão de Login (fecha modal)
+│
+└── Outras seções futuras:
+    ├─ Author / Instructor
+    ├─ Pricing / Enrollment
+    ├─ Testimonials
+    └─ Footer
+        ├─ Fundo: dark (#1e293b)
+        ├─ Texto: branco / cinza claro
+        ├─ Links sociais + Quick Links + Contact
+        └─ Botão login (abre LoginModal)
 
-E eu já vou assumir:
+🎨 Paleta de cores principal
+Elemento	Cor / Hex
+Fundo Hero	#2563eb (azul)
+Texto Hero	#ffffff
+Texto Subtítulo	#ffffff/90
+Cor Primária	#2563eb
+Cor Secundária	#1e40af
+Cor Accent	#f59e0b
+Fundo Course	#f8fafc (gray-50)
+Card Background	#ffffff
+Card Border	#e5e7eb (gray-200)
+Card Shadow	shadow-lg / hover:shadow-2xl
+Footer Background	#1e293b (dark)
+Footer Text	#ffffff / #d1d5db (gray-300)
+🖌 Shadows e efeitos principais
 
-✔ Tailwind já funciona
-✔ Vite já funciona
-✔ Estrutura components já existe
-✔ Estamos na fase de montar conteúdo
+Course card → shadow-lg
 
-⭐ Próxima fase quando voltar (provável)
+Hover card → hover:shadow-2xl
 
-Uma dessas:
+Hero buttons → hover:-translate-y-1 + cor hover
 
-👉 Ajustar tela branca
-👉 Revisar App.tsx
-👉 Revisar index.css
-👉 Revisar Tailwind config
-👉 Migrar HTML real → components
+Modal → overlay escuro semi-transparente
 
-💬 Resumo ultra curto
+Header → sticky top, shadow ao scroll
 
-Você NÃO está mais no setup.
-Você está na fase montagem final do site React.
+💡 Observações para continuidade
 
-Se quiser, quando voltar posso fazer modo:
+Hero agora tem texto branco legível sobre fundo azul (#2563eb)
 
-⚡ Debug rápido → resolver tela branca / layout
-OU
-🏗 Montagem → transformar HTML final em React definitivo
-OU
-💎 Profissional → otimizar como empresa faria
+CourseFeatures com sombra forte destacando os cards
 
-Quando voltar só manda:
+Próximos componentes a criar com base no mapa visual:
 
-👉 Continuar checkpoint Esdras
+Author / Instructor
 
-E seguimos 😄
+Pricing / Enrollment
+
+Testimonials
+
+Footer
+
+Manter consistência de cores, sombras e hover conforme paleta acima
+
+Se quiser, posso fazer uma versão “miniatura visual do site”, tipo esquema com blocos coloridos mostrando Hero, CourseFeatures, Author, Pricing e Footer, só para referência rápida enquanto programa.
+
+Quer que eu faça essa versão gráfica do site também?

@@ -1,7 +1,19 @@
+// src/App.tsx
 import { useState } from "react";
+
+// Layout
 import Header from "./components/layout/Header";
-import LoginModal from "./components/ui/LoginModal";
+import Footer from "./components/layout/Footer";
+
+// Sections
 import Hero from "./components/sections/Hero";
+import CourseFeatures from "./components/sections/CourseFeatures";
+import Author from "./components/sections/Author";
+import Pricing from "./components/sections/Pricing";
+import Testimonials from "./components/sections/Testimonials";
+
+// UI
+import LoginModal from "./components/ui/LoginModal";
 
 function App() {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -11,16 +23,20 @@ function App() {
       {/* Header */}
       <Header onLoginClick={() => setLoginOpen(true)} />
 
-      {/* Conteúdo principal */}
+      {/* Login Modal */}
+      <LoginModal isOpen={loginOpen} onClose={() => setLoginOpen(false)} />
+
+      {/* Main Content */}
       <main className="pt-16">
         <Hero />
+        <CourseFeatures />
+        <Author />
+        <Pricing />
+        <Testimonials />
       </main>
 
-      {/* Modal Login */}
-      <LoginModal
-        isOpen={loginOpen}
-        onClose={() => setLoginOpen(false)}
-      />
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
