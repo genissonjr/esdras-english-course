@@ -20,9 +20,9 @@ export default function Pricing() {
               </ul>
             </div>
             <div className="lg:w-1/3 bg-white border border-gray-200 rounded-xl p-8 shadow-lg text-center">
-              <div className="text-5xl font-bold text-gray-900 mb-2">R$ 1.000,00</div>
+              <div className="text-5xl font-bold text-gray-900 mb-2 text-shadow-lg">R$ 1.000,00</div>
               <div className="text-gray-600 mb-6">One-time payment</div>
-              <a href="#" className="block w-full bg-primary hover:bg-secondary text-white font-bold py-4 px-6 rounded-lg text-lg transition transform hover:-translate-y-1 mb-4">
+              <a href="#" className="bg-white/20 hover:bg-yellow-600 block w-full bg-primary hover:bg-secondary text-gray-900 font-bold py-4 px-6 rounded-lg text-lg transition transform hover:-translate-y-1 mb-4">
                 Enroll via Google Forms
               </a>
               <div className="text-sm text-gray-500">Secure enrollment • Instant access • 7-day support</div>

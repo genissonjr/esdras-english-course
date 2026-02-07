@@ -17,12 +17,16 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          {/*<h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Master English with the Esdras Method
+          </h1>*/}
+
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-lg">
             Master English with the Esdras Method
           </h1>
-
+           
           {/* Subtitle */}
-          <p className="text-lg md:text-xl mb-8 text-white/90">
+          <p className="text-lg md:text-xl mb-8 text-white/90 text-shadow-lg">
             A comprehensive online English course designed to take you from beginner to fluent speaker in just 6 months.
           </p>
 
